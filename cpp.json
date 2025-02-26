@@ -1,0 +1,213 @@
+/*
+Wheeler Knight - Feb 25th, 2025
+C++ Snippet File and Reference
+*/
+
+
+{
+"Boilerplate Main": {
+	"prefix": "cppboiler",
+	"body": [
+		"#include <iostream>",
+		"",
+		"using namespace std;",
+		"",
+		"int main() {",
+		"//main function",
+		" ",
+		"$0",
+		"",
+		"",
+		"",
+		" cout << endl;",
+		" return 0;",
+		"}"
+	],
+	"description": "Basic C++ program template"
+},
+
+  "Include Statement": {
+    "prefix": "cppinclude",
+    "body": "#include <${1:library}>",
+    "description": "Add include statement"
+  },
+  "For Loop": {
+    "prefix": "cppforloop",
+    "body": "for(int ${1:i} = ${2:0}; ${1:i} ${3:<} ${4:n}; ${1:i}${5:++}) {\n\t${6:// code}\n}",
+    "description": "Create a for loop"
+  },
+  "Range Based For Loop": {
+    "prefix": "cpprangeforloop",
+    "body": "for(const auto& ${1:item} : ${2:collection}) {\n\t${3:// code}\n}",
+    "description": "Create a range-based for loop"
+  },
+  "While Loop": {
+    "prefix": "cppwhileloop",
+    "body": "while(${1:condition}) {\n\t${2:// code}\n}",
+    "description": "Create a while loop"
+  },
+  "Switch Statement": {
+    "prefix": "cppswitch",
+    "body": "switch(${1:expression}) {\n\tcase ${2:value1}:\n\t\t${3:// code}\n\t\tbreak;\n\tcase ${4:value2}:\n\t\t${5:// code}\n\t\tbreak;\n\tdefault:\n\t\t${6:// code}\n}",
+    "description": "Create a switch statement"
+  },
+  "If Else Statement": {
+    "prefix": "cppifelse",
+    "body": "if(${1:condition}) {\n\t${2:// code}\n} else {\n\t${3:// code}\n}",
+    "description": "Create an if-else statement"
+  },
+  "If Elseif Else": {
+    "prefix": "cppifelseifelse",
+    "body": "if(${1:condition1}) {\n\t${2:// code}\n} else if(${3:condition2}) {\n\t${4:// code}\n} else {\n\t${5:// code}\n}",
+    "description": "Create an if-elseif-else statement"
+  },
+  "If Statement": {
+    "prefix": "cppifline",
+    "body": "if(${1:condition}) ${2:statement};",
+    "description": "Create a single-line if statement"
+  },
+  "Else If Statement": {
+    "prefix": "cppelseifline",
+    "body": "else if(${1:condition}) ${2:statement};",
+    "description": "Create a single-line else-if statement"
+  },
+  "Conditional": {
+    "prefix": "cppconditional",
+    "body": "(${1:condition}) ? ${2:value1} : ${3:value2}",
+    "description": "Create a conditional expression"
+  },
+  "Cout": {
+    "prefix": "cppcout",
+    "body": "cout << ${1:\"\"} << endl;",
+    "description": "Create a cout statement"
+  },
+  "Cin": {
+    "prefix": "cppcin",
+    "body": "cin >> ${1:variable};",
+    "description": "Create a cin statement"
+  },
+  "Initialize Int": {
+    "prefix": "initint",
+    "body": "int ${1:name}{${2:0}};",
+    "description": "Initialize an integer"
+  },
+  "Initialize Char": {
+    "prefix": "initchar",
+    "body": "char ${1:name}{'${2:a}'};",
+    "description": "Initialize a character"
+  },
+  "Initialize Pointer": {
+    "prefix": "initpointer",
+    "body": "${1:type}* ${2:name}{nullptr};",
+    "description": "Initialize a pointer"
+  },
+  "Initialize String": {
+    "prefix": "initstring",
+    "body": "string ${1:name}{\"${2:value}\"};",
+    "description": "Initialize a string"
+  },
+  "Initialize Boolean": {
+    "prefix": "initbool",
+    "body": "bool ${1:name}{${2:false}};",
+    "description": "Initialize a boolean"
+  },
+  "Initialize Double": {
+    "prefix": "initdouble",
+    "body": "double ${1:name}{${2:0.0}};",
+    "description": "Initialize a double"
+  },
+  "Initialize Vector": {
+    "prefix": "initvector",
+    "body": "vector<${1:type}> ${2:name};",
+    "description": "Initialize a vector"
+  },
+  "Initialize 2D Vector": {
+    "prefix": "init2dvector",
+    "body": "vector<vector<${1:type}>> ${2:name}(${3:rows}, vector<${1:type}>(${4:cols}));",
+    "description": "Initialize a 2D vector"
+  },
+  "Declare Function": {
+    "prefix": "decfunc",
+    "body": "${1:returnType} ${2:functionName}(${3:parameters}) {\n\t${4:// code}\n}",
+    "description": "Declare a function"
+  },
+  "Vector Push Back": {
+    "prefix": "callvecpb",
+    "body": "${1:vectorName}.push_back(${2:value});",
+    "description": "Call vector push_back"
+  },
+  "Vector At": {
+    "prefix": "callvecat",
+    "body": "${1:vectorName}.at(${2:index})",
+    "description": "Call vector at"
+  },
+  "Vector Size": {
+    "prefix": "callvecsize",
+    "body": "${1:vectorName}.size()",
+    "description": "Call vector size"
+  },
+
+    "Class Declaration": {
+        "prefix": "cppclass",
+        "body": "class ${1:ClassName} {\nprivate:\n\t${2:// private members}\npublic:\n\t${1:ClassName}() = default;\n\t~${1:ClassName}() = default;\n\t${3:// public members}\n};",
+        "description": "Create a class declaration"
+    },
+    "Try Catch Block": {
+        "prefix": "cpptrycatch",
+        "body": "try {\n\t${1:// code}\n} catch(const ${2:std::exception}& e) {\n\t${3:// handle error}\n}",
+        "description": "Create a try-catch block"
+    },
+    "File Input Stream": {
+        "prefix": "cppifstream",
+        "body": "ifstream ${1:inFile}{\"${2:filename}\"};\nif(!${1:inFile}) {\n\tcerr << \"Error opening file\" << endl;\n\treturn 1;\n}",
+        "description": "Create and check file input stream"
+    },
+    "File Output Stream": {
+        "prefix": "cppofstream",
+        "body": "ofstream ${1:outFile}{\"${2:filename}\"};\nif(!${1:outFile}) {\n\tcerr << \"Error opening file\" << endl;\n\treturn 1;\n}",
+        "description": "Create and check file output stream"
+    },
+    "Lambda Function": {
+        "prefix": "cpplambda",
+        "body": "auto ${1:lambdaName} = [${2:capture}](${3:params}) {\n\t${4:// code}\n};",
+        "description": "Create a lambda function"
+    },
+    "Smart Pointer": {
+        "prefix": "cppsmartptr",
+        "body": "unique_ptr<${1:Type}> ${2:ptrName} = make_unique<${1:Type}>(${3:args});",
+        "description": "Create a smart pointer"
+    },
+    "Array Declaration": {
+        "prefix": "cpparr",
+        "body": "array<${1:type}, ${2:size}> ${3:name}{};",
+        "description": "Create a fixed-size array"
+    },
+    "Map Declaration": {
+        "prefix": "cppmap",
+        "body": "map<${1:KeyType}, ${2:ValueType}> ${3:name};",
+        "description": "Create a map container"
+    },
+    "String Operations": {
+        "prefix": "cppstrops",
+        "body": "string ${1:str} = \"${2:value}\";\n${1:str}.substr(${3:pos}, ${4:len});\n${1:str}.find(${5:search});\n${1:str}.length();",
+        "description": "Common string operations"
+    },
+    "Template Function": {
+        "prefix": "cpptemplate",
+        "body": "template<typename ${1:T}>\n${2:returnType} ${3:functionName}(${4:params}) {\n\t${5:// code}\n}",
+        "description": "Create a template function"
+    },
+    "Enum Class": {
+        "prefix": "cppenum",
+        "body": "enum class ${1:EnumName} {\n\t${2:Value1},\n\t${3:Value2},\n\t${4:Value3}\n};",
+        "description": "Create an enum class"
+    },
+    "Random Number": {
+        "prefix": "cpprandom",
+        "body": "random_device rd;\nmt19937 gen(rd());\nuniform_int_distribution<> dis(${1:min}, ${2:max});",
+        "description": "Setup random number generation"
+    }
+
+
+
+}
